@@ -1,27 +1,996 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" data-fls-cursor="">
 	<head>
+		<style data-fls-preloader="false" rel="preload">
+			body>*:not(.fls-preloader) {
+		opacity: 0;
+		visibility: hidden;
+	}
+
+	[data-fls-preloader-loaded] body>*:not(.fls-preloader) {
+		transition: opacity 0.5s ease 0s;
+		opacity: 1;
+		visibility: visible;
+	}
+		</style>
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<link rel="shortcut icon" href="./assets/img/favicon.ico">
 		<title>Home Page</title>
-		<script type="module" crossorigin="" src="./js/index.min.js?v=1767610453025"></script>
-		<link rel="modulepreload" crossorigin="" href="./js/common.min.js?v=1767610453025">
-		<link rel="stylesheet" crossorigin="" href="./css/index.min.css?v=1767610453025">
+		<script type="module" crossorigin="" src="./js/index.min.js?v=1769633523572"></script>
+		<link rel="modulepreload" crossorigin="" href="./js/common.min.js?v=1769633523572">
+		<link rel="stylesheet" crossorigin="" href="./css/index.min.css?v=1769633523572">
 	</head>
 	<body>
 		<div class="wrapper">
-			<header data-fls-header="" class="header">
+			<header class="header" data-fls-header="" data-fls-header-scroll="" data-fls-watcher="">
 				<div class="header__container">
-					<!-- <include src="@components/layout/menu/menu.html" locals='{"active":"Home"}'></include> -->
+					<div class="header__logo">
+						<a href="/" class="header__logo-link logo" data-fls-scrollto=".hero" data-fls-scrollto-header="">Interia</a>
+					</div>
+					<div class="header__menu menu">
+						<button type="button" data-fls-menu="" class="menu__icon icon-menu">
+							<span></span>
+						</button>
+						<nav class="menu__body">
+							<ul class="menu__list">
+								<li class="menu__item">
+									<a href="#" data-fls-scrollto=".about" data-fls-scrollto-header="" class="menu__link effect-3d">
+										<span>about</span>
+										<span>about</span>
+									</a>
+								</li>
+								<li class="menu__item">
+									<a href="#" data-fls-scrollto=".team" data-fls-scrollto-header="" class="menu__link effect-3d">
+										<span>team</span>
+										<span>team</span>
+									</a>
+								</li>
+								<li class="menu__item">
+									<a href="#" data-fls-scrollto=".services" data-fls-scrollto-header="" class="menu__link effect-3d">
+										<span>services</span>
+										<span>services</span>
+									</a>
+								</li>
+								<li class="menu__item">
+									<a href="#" data-fls-scrollto=".projects" data-fls-scrollto-header="" class="menu__link effect-3d">
+										<span>projects</span>
+										<span>projects</span>
+									</a>
+								</li>
+								<li class="menu__item">
+									<a href="#" data-fls-scrollto=".contacts" data-fls-scrollto-header="" class="menu__link effect-3d">
+										<span>contacts</span>
+										<span>contacts</span>
+									</a>
+								</li>
+							</ul>
+						</nav>
+					</div>
+					<!--
+<fetch url="@components/layout/menu/menu.json">
+<each loop='item in response'>
+</each>
+</fetch>
+-->
+					<a href="tel:+380638509940" class="header__get-started effect-left-shift">
+						<span>GET STARTED</span>
+						<span>+38 (063) 850 99 40</span>
+					</a>
 				</div>
 			</header>
-			<main class="page page--index">
-				<div class="page__container"></div>
+			<main class="page">
+				<section class="hero" data-fls-watcher="" data-fls-watcher-once="">
+					<div class="hero__container">
+						<div class="hero__body">
+							<button type="button" class="hero__swipe-down" data-fls-scrollto=".about">SWIPE DOWN</button>
+							<div class="hero__pagination swiper-pagination"></div>
+						</div>
+					</div>
+					<div data-fls-slider="" class="hero__slider swiper">
+						<div class="hero__wrapper swiper-wrapper">
+							<div class="hero__slide slide-hero swiper-slide">
+								<div class="slide-hero__content">
+									<div class="slide-hero__title-wrapper">
+										<h1 class="slide-hero__title title">
+											We design your room aesthetic
+											<!-- h1 -->
+										</h1>
+									</div>
+									<div class="slide-hero__text text">
+										<p>
+											From curated color palettes to hand-picked decor, we create cohesive environments that reflect your unique taste.
+										</p>
+									</div>
+								</div>
+								<div class="slide-hero__image">
+									<div class="slide-hero__image-wr">
+										<picture>
+											<source media="(max-width: 600px)" srcset="./assets/img/hero/01-600.webp" type="image/webp">
+											<source media="(max-width: 1200px)" srcset="./assets/img/hero/01-1200.webp" type="image/webp">
+											<img alt="Image" data-fls-mouse="" data-fls-mouse-cx="1000" data-fls-mouse-cy="600" src="./assets/img/hero/01.webp">
+										</picture>
+									</div>
+								</div>
+							</div>
+							<div class="hero__slide slide-hero swiper-slide">
+								<div class="slide-hero__content">
+									<div class="slide-hero__title-wrapper">
+										<h2 class="slide-hero__title title">
+											Your interior is a reflection of you
+											<!-- h2 -->
+										</h2>
+									</div>
+									<div class="slide-hero__text text">
+										<p>
+											Your home should tell your story. We translate your personality into a living space that feels authentically yours.
+										</p>
+									</div>
+								</div>
+								<div class="slide-hero__image">
+									<div class="slide-hero__image-wr">
+										<picture>
+											<source media="(max-width: 600px)" srcset="./assets/img/hero/02-600.webp" type="image/webp">
+											<source media="(max-width: 1200px)" srcset="./assets/img/hero/02-1200.webp" type="image/webp">
+											<img alt="Image" data-fls-mouse="" data-fls-mouse-cx="1000" data-fls-mouse-cy="600" src="./assets/img/hero/02.webp">
+										</picture>
+									</div>
+								</div>
+							</div>
+							<div class="hero__slide slide-hero swiper-slide">
+								<div class="slide-hero__content">
+									<div class="slide-hero__title-wrapper">
+										<h2 class="slide-hero__title title">
+											Designing spaces that inspire
+											<!-- h2 -->
+										</h2>
+									</div>
+									<div class="slide-hero__text text">
+										<p>
+											Transform your surroundings into a source of daily motivation. We craft interiors that fuel creativity and provide lasting comfort.
+										</p>
+									</div>
+								</div>
+								<div class="slide-hero__image">
+									<div class="slide-hero__image-wr">
+										<picture>
+											<source media="(max-width: 600px)" srcset="./assets/img/hero/03-600.webp" type="image/webp">
+											<source media="(max-width: 1200px)" srcset="./assets/img/hero/03-1200.webp" type="image/webp">
+											<img alt="Image" data-fls-mouse="" data-fls-mouse-cx="1000" data-fls-mouse-cy="600" src="./assets/img/hero/03.webp">
+										</picture>
+									</div>
+								</div>
+							</div>
+							<div class="hero__slide slide-hero swiper-slide">
+								<div class="slide-hero__content">
+									<div class="slide-hero__title-wrapper">
+										<h2 class="slide-hero__title title">
+											Your space. Your vibe.
+											<!-- h2 -->
+										</h2>
+									</div>
+									<div class="slide-hero__text text">
+										<p>
+											Whether you crave calm minimalism or bold energy, we tailor every detail to match the atmosphere you want to live in.
+										</p>
+									</div>
+								</div>
+								<div class="slide-hero__image">
+									<div class="slide-hero__image-wr">
+										<picture>
+											<source media="(max-width: 600px)" srcset="./assets/img/hero/04-600.webp" type="image/webp">
+											<source media="(max-width: 1200px)" srcset="./assets/img/hero/04-1200.webp" type="image/webp">
+											<img alt="Image" data-fls-mouse="" data-fls-mouse-cx="1000" data-fls-mouse-cy="600" src="./assets/img/hero/04.webp">
+										</picture>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+				<section class="about section-pbl" data-fls-watcher="navigator">
+					<div class="about__subtitle subtitle-effect" data-fls-watcher="" data-fls-watcher-threshold="0.5" data-fls-mouse="" data-fls-mouse-cx="600" data-fls-mouse-cy="120">
+						<span>A</span>
+						<span>b</span>
+						<span>o</span>
+						<span>u</span>
+						<span>t</span>
+						<span></span>
+						<span>U</span>
+						<span>s</span>
+					</div>
+					<div class="about__container" data-fls-watcher="" data-fls-watcher-once="" data-fls-watcher-threshold="0.1">
+						<div class="about__header">
+							<h2 class="about__title title">We are the best interior design studio in Kyiv</h2>
+							<div class="about__text text">
+								<p>
+									Posuere urna nec tincidunt praesent. Egestas maecenas pharetra convallis posuere. Ipsum nunc aliquet bibendum enim. Sem integer vitae justo eget magna fermentum iaculis eu non.
+								</p>
+							</div>
+						</div>
+						<div class="about__body body-about" data-fls-gallery="">
+							<a href="./assets/img/about/01.webp" class="body-about__image">
+								<picture>
+									<source media="(max-width: 600px)" srcset="./assets/img/about/01-600.webp" type="image/webp">
+									<source media="(max-width: 1200px)" srcset="./assets/img/about/01-1200.webp" type="image/webp">
+									<img alt="Photo of our project" src="./assets/img/about/01.webp">
+								</picture>
+							</a>
+							<a href="./assets/img/about/02.webp" class="body-about__image">
+								<picture>
+									<source media="(max-width: 600px)" srcset="./assets/img/about/02-600.webp" type="image/webp">
+									<img alt="Photo of our project" src="./assets/img/about/02.webp">
+								</picture>
+							</a>
+							<a href="./assets/img/about/03.webp" class="body-about__image">
+								<picture>
+									<source media="(max-width: 600px)" srcset="./assets/img/about/03-600.webp" type="image/webp">
+									<source media="(max-width: 1200px)" srcset="./assets/img/about/03-1200.webp" type="image/webp">
+									<img alt="Photo of our project" src="./assets/img/about/03.webp">
+								</picture>
+							</a>
+							<a href="./assets/img/about/04.webp" class="body-about__image">
+								<picture>
+									<source media="(max-width: 600px)" srcset="./assets/img/about/04-600.webp" type="image/webp">
+									<img alt="Photo of our project" src="./assets/img/about/04.webp">
+								</picture>
+							</a>
+							<div class="body-about__statistics">
+								<div class="body-about__item">
+									<div class="body-about__stat-number">2K+</div>
+									<div class="body-about__stat-text">PROJECTS DONE</div>
+								</div>
+								<div class="body-about__item">
+									<div class="body-about__stat-number">20+</div>
+									<div class="body-about__stat-text">PRO TEAMS</div>
+								</div>
+								<div class="body-about__item">
+									<div class="body-about__stat-number">300+</div>
+									<div class="body-about__stat-text">GLOBAL CLIENTS</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+				<section class="team section-pbl" data-fls-watcher="navigator">
+					<div class="team__subtitle subtitle-effect" data-fls-watcher="" data-fls-watcher-threshold="0.5" data-fls-mouse="" data-fls-mouse-cx="600" data-fls-mouse-cy="120">
+						<span>O</span>
+						<span>u</span>
+						<span>r</span>
+						<span></span>
+						<span>T</span>
+						<span>e</span>
+						<span>a</span>
+						<span>m</span>
+					</div>
+					<div class="team__container" data-fls-watcher="" data-fls-watcher-once="" data-fls-watcher-threshold="0.1">
+						<div class="team__header">
+							<h2 class="team__title title">Projects are handled by professional certified teams</h2>
+							<div class="team__text text">
+								<p>
+									Posuere urna nec tincidunt praesent egestas maecenas pharetra convallis posuere ipsum nunc aliquet bibendum enim consectetur adipiscing.
+								</p>
+							</div>
+						</div>
+						<div class="team__body">
+							<div class="team__customers customers-team">
+								<div class="customers-team__avatars">
+									<picture>
+										<source media="(max-width: 600px)" srcset="./assets/img/team/avatars/01-600.webp" type="image/webp">
+										<img alt="customer avatar" class="customers-team__avatar" data-fls-popup-link="customer-popup-1" src="./assets/img/team/avatars/01.webp">
+									</picture>
+									<picture>
+										<img alt="customer avatar" class="customers-team__avatar" data-fls-popup-link="customer-popup-2" src="./assets/img/team/avatars/02.webp">
+									</picture>
+									<picture>
+										<img alt="customer avatar" class="customers-team__avatar" data-fls-popup-link="customer-popup-3" src="./assets/img/team/avatars/03.webp">
+									</picture>
+									<picture>
+										<source media="(max-width: 600px)" srcset="./assets/img/team/avatars/04-600.webp" type="image/webp">
+										<img alt="customer avatar" class="customers-team__avatar" data-fls-popup-link="customer-popup-4" src="./assets/img/team/avatars/04.webp">
+									</picture>
+								</div>
+								<div class="customers-team__reviews">
+									<div data-fls-rating="" data-fls-rating-value="4.6" inert class="customers-team__rating"></div>
+									<span>(4.6 reviews)</span>
+								</div>
+								<div class="customers-team__label">TRUSTED BY CUSTOMERS</div>
+							</div>
+							<div class="team__members members-team">
+								<div class="members-team__item">
+									<picture>
+										<img alt="Photo of team member" class="members-team__image" src="./assets/img/team/image-01.webp">
+									</picture>
+									<button type="button" class="members-team__button effect-left-shift">
+										<span>Serhiy Konovalov</span>
+										<span class="members-team__socials socials">
+											<a href="https://www.linkedin.com/in/serhiy-konovalov-28605b323/" target="_blank" class="social social--linkedin" aria-label="linkedin">
+												<svg fill="currentColor" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewbox="-30.72 -30.72 573.44 573.44" xml:space="preserve">
+													<path style="display: inline; fill-rule: evenodd; clip-rule: evenodd;" d="M116.504,500.219V170.654H6.975v329.564H116.504 L116.504,500.219z M61.751,125.674c38.183,0,61.968-25.328,61.968-56.953c-0.722-32.328-23.785-56.941-61.252-56.941 C24.994,11.781,0.5,36.394,0.5,68.722c0,31.625,23.772,56.953,60.53,56.953H61.751L61.751,125.674z M177.124,500.219 c0,0,1.437-298.643,0-329.564H286.67v47.794h-0.727c14.404-22.49,40.354-55.533,99.44-55.533 c72.085,0,126.116,47.103,126.116,148.333v188.971H401.971V323.912c0-44.301-15.848-74.531-55.497-74.531 c-30.254,0-48.284,20.38-56.202,40.08c-2.897,7.012-3.602,16.861-3.602,26.711v184.047H177.124L177.124,500.219z"></path>
+												</svg>
+											</a>
+											<a href="https://www.instagram.com/web_interface_developer" target="_blank" class="social social--instagram" aria-label="instagram">
+												<svg viewbox="0 0 20.00 20.00" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" fill="currentColor">
+													<g id="Dribbble-Light-Preview" transform="translate(-340.000000, -7439.000000)" fill="currentColor">
+														<g id="icons" transform="translate(56.000000, 160.000000)">
+															<path d="M289.869652,7279.12273 C288.241769,7279.19618 286.830805,7279.5942 285.691486,7280.72871 C284.548187,7281.86918 284.155147,7283.28558 284.081514,7284.89653 C284.035742,7285.90201 283.768077,7293.49818 284.544207,7295.49028 C285.067597,7296.83422 286.098457,7297.86749 287.454694,7298.39256 C288.087538,7298.63872 288.809936,7298.80547 289.869652,7298.85411 C298.730467,7299.25511 302.015089,7299.03674 303.400182,7295.49028 C303.645956,7294.859 303.815113,7294.1374 303.86188,7293.08031 C304.26686,7284.19677 303.796207,7282.27117 302.251908,7280.72871 C301.027016,7279.50685 299.5862,7278.67508 289.869652,7279.12273 M289.951245,7297.06748 C288.981083,7297.0238 288.454707,7296.86201 288.103459,7296.72603 C287.219865,7296.3826 286.556174,7295.72155 286.214876,7294.84312 C285.623823,7293.32944 285.819846,7286.14023 285.872583,7284.97693 C285.924325,7283.83745 286.155174,7282.79624 286.959165,7281.99226 C287.954203,7280.99968 289.239792,7280.51332 297.993144,7280.90837 C299.135448,7280.95998 300.179243,7281.19026 300.985224,7281.99226 C301.980262,7282.98483 302.473801,7284.28014 302.071806,7292.99991 C302.028024,7293.96767 301.865833,7294.49274 301.729513,7294.84312 C300.829003,7297.15085 298.757333,7297.47145 289.951245,7297.06748 M298.089663,7283.68956 C298.089663,7284.34665 298.623998,7284.88065 299.283709,7284.88065 C299.943419,7284.88065 300.47875,7284.34665 300.47875,7283.68956 C300.47875,7283.03248 299.943419,7282.49847 299.283709,7282.49847 C298.623998,7282.49847 298.089663,7283.03248 298.089663,7283.68956 M288.862673,7288.98792 C288.862673,7291.80286 291.150266,7294.08479 293.972194,7294.08479 C296.794123,7294.08479 299.081716,7291.80286 299.081716,7288.98792 C299.081716,7286.17298 296.794123,7283.89205 293.972194,7283.89205 C291.150266,7283.89205 288.862673,7286.17298 288.862673,7288.98792 M290.655732,7288.98792 C290.655732,7287.16159 292.140329,7285.67967 293.972194,7285.67967 C295.80406,7285.67967 297.288657,7287.16159 297.288657,7288.98792 C297.288657,7290.81525 295.80406,7292.29716 293.972194,7292.29716 C292.140329,7292.29716 290.655732,7290.81525 290.655732,7288.98792" id="instagram-[#167]"></path>
+														</g>
+													</g>
+												</svg>
+											</a>
+											<a href="https://t.me/Web_Interface_Developer" target="_blank" class="social social--telegram" aria-label="telegram">
+												<svg viewbox="0 0 48.00 48.00" fill="none" xmlns="http://www.w3.org/2000/svg">
+													<path d="M41.4193 7.30899C41.4193 7.30899 45.3046 5.79399 44.9808 9.47328C44.8729 10.9883 43.9016 16.2908 43.1461 22.0262L40.5559 39.0159C40.5559 39.0159 40.3401 41.5048 38.3974 41.9377C36.4547 42.3705 33.5408 40.4227 33.0011 39.9898C32.5694 39.6652 24.9068 34.7955 22.2086 32.4148C21.4531 31.7655 20.5897 30.4669 22.3165 28.9519L33.6487 18.1305C34.9438 16.8319 36.2389 13.8019 30.8426 17.4812L15.7331 27.7616C15.7331 27.7616 14.0063 28.8437 10.7686 27.8698L3.75342 25.7055C3.75342 25.7055 1.16321 24.0823 5.58815 22.459C16.3807 17.3729 29.6555 12.1786 41.4193 7.30899Z" fill="currentColor"></path>
+												</svg>
+											</a>
+										</span>
+									</button>
+								</div>
+								<div class="members-team__item">
+									<picture>
+										<img alt="Photo of team member" class="members-team__image" src="./assets/img/team/image-02.webp">
+									</picture>
+									<button type="button" class="members-team__button effect-left-shift">
+										<span>Name Surname</span>
+										<span class="members-team__socials socials">
+											<a href="https://www.linkedin.com/in/serhiy-konovalov-28605b323/" target="_blank" class="social social--linkedin" aria-label="linkedin">
+												<svg fill="currentColor" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewbox="-30.72 -30.72 573.44 573.44" xml:space="preserve">
+													<path style="display: inline; fill-rule: evenodd; clip-rule: evenodd;" d="M116.504,500.219V170.654H6.975v329.564H116.504 L116.504,500.219z M61.751,125.674c38.183,0,61.968-25.328,61.968-56.953c-0.722-32.328-23.785-56.941-61.252-56.941 C24.994,11.781,0.5,36.394,0.5,68.722c0,31.625,23.772,56.953,60.53,56.953H61.751L61.751,125.674z M177.124,500.219 c0,0,1.437-298.643,0-329.564H286.67v47.794h-0.727c14.404-22.49,40.354-55.533,99.44-55.533 c72.085,0,126.116,47.103,126.116,148.333v188.971H401.971V323.912c0-44.301-15.848-74.531-55.497-74.531 c-30.254,0-48.284,20.38-56.202,40.08c-2.897,7.012-3.602,16.861-3.602,26.711v184.047H177.124L177.124,500.219z"></path>
+												</svg>
+											</a>
+											<a href="https://www.instagram.com/web_interface_developer" target="_blank" class="social social--instagram" aria-label="instagram">
+												<svg viewbox="0 0 20.00 20.00" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" fill="currentColor">
+													<g id="Dribbble-Light-Preview" transform="translate(-340.000000, -7439.000000)" fill="currentColor">
+														<g id="icons" transform="translate(56.000000, 160.000000)">
+															<path d="M289.869652,7279.12273 C288.241769,7279.19618 286.830805,7279.5942 285.691486,7280.72871 C284.548187,7281.86918 284.155147,7283.28558 284.081514,7284.89653 C284.035742,7285.90201 283.768077,7293.49818 284.544207,7295.49028 C285.067597,7296.83422 286.098457,7297.86749 287.454694,7298.39256 C288.087538,7298.63872 288.809936,7298.80547 289.869652,7298.85411 C298.730467,7299.25511 302.015089,7299.03674 303.400182,7295.49028 C303.645956,7294.859 303.815113,7294.1374 303.86188,7293.08031 C304.26686,7284.19677 303.796207,7282.27117 302.251908,7280.72871 C301.027016,7279.50685 299.5862,7278.67508 289.869652,7279.12273 M289.951245,7297.06748 C288.981083,7297.0238 288.454707,7296.86201 288.103459,7296.72603 C287.219865,7296.3826 286.556174,7295.72155 286.214876,7294.84312 C285.623823,7293.32944 285.819846,7286.14023 285.872583,7284.97693 C285.924325,7283.83745 286.155174,7282.79624 286.959165,7281.99226 C287.954203,7280.99968 289.239792,7280.51332 297.993144,7280.90837 C299.135448,7280.95998 300.179243,7281.19026 300.985224,7281.99226 C301.980262,7282.98483 302.473801,7284.28014 302.071806,7292.99991 C302.028024,7293.96767 301.865833,7294.49274 301.729513,7294.84312 C300.829003,7297.15085 298.757333,7297.47145 289.951245,7297.06748 M298.089663,7283.68956 C298.089663,7284.34665 298.623998,7284.88065 299.283709,7284.88065 C299.943419,7284.88065 300.47875,7284.34665 300.47875,7283.68956 C300.47875,7283.03248 299.943419,7282.49847 299.283709,7282.49847 C298.623998,7282.49847 298.089663,7283.03248 298.089663,7283.68956 M288.862673,7288.98792 C288.862673,7291.80286 291.150266,7294.08479 293.972194,7294.08479 C296.794123,7294.08479 299.081716,7291.80286 299.081716,7288.98792 C299.081716,7286.17298 296.794123,7283.89205 293.972194,7283.89205 C291.150266,7283.89205 288.862673,7286.17298 288.862673,7288.98792 M290.655732,7288.98792 C290.655732,7287.16159 292.140329,7285.67967 293.972194,7285.67967 C295.80406,7285.67967 297.288657,7287.16159 297.288657,7288.98792 C297.288657,7290.81525 295.80406,7292.29716 293.972194,7292.29716 C292.140329,7292.29716 290.655732,7290.81525 290.655732,7288.98792" id="instagram-[#167]"></path>
+														</g>
+													</g>
+												</svg>
+											</a>
+											<a href="https://t.me/Web_Interface_Developer" target="_blank" class="social social--telegram" aria-label="telegram">
+												<svg viewbox="0 0 48.00 48.00" fill="none" xmlns="http://www.w3.org/2000/svg">
+													<path d="M41.4193 7.30899C41.4193 7.30899 45.3046 5.79399 44.9808 9.47328C44.8729 10.9883 43.9016 16.2908 43.1461 22.0262L40.5559 39.0159C40.5559 39.0159 40.3401 41.5048 38.3974 41.9377C36.4547 42.3705 33.5408 40.4227 33.0011 39.9898C32.5694 39.6652 24.9068 34.7955 22.2086 32.4148C21.4531 31.7655 20.5897 30.4669 22.3165 28.9519L33.6487 18.1305C34.9438 16.8319 36.2389 13.8019 30.8426 17.4812L15.7331 27.7616C15.7331 27.7616 14.0063 28.8437 10.7686 27.8698L3.75342 25.7055C3.75342 25.7055 1.16321 24.0823 5.58815 22.459C16.3807 17.3729 29.6555 12.1786 41.4193 7.30899Z" fill="currentColor"></path>
+												</svg>
+											</a>
+										</span>
+									</button>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+				<section class="services section-pbl" data-fls-watcher="navigator">
+					<div class="services__subtitle subtitle-effect" data-fls-watcher="" data-fls-watcher-threshold="0.5" data-fls-mouse="" data-fls-mouse-cx="600" data-fls-mouse-cy="120">
+						<span>S</span>
+						<span>e</span>
+						<span>r</span>
+						<span>v</span>
+						<span>i</span>
+						<span>c</span>
+						<span>e</span>
+						<span>s</span>
+					</div>
+					<div class="services__container" data-fls-watcher="" data-fls-watcher-once="" data-fls-watcher-threshold="0.1">
+						<div class="services__item">
+							<h2 class="services__title title">01. Interior design</h2>
+							<div class="services__content">
+								<div class="services__text text text--gray">
+									<p>
+										Posuere urna nec tincidunt praesent egestas maecenas pharetra convallis posuere ipsum nunc aliquet bibendum enim consectetur adipiscing.
+									</p>
+								</div>
+								<button type="button" class="services__button effect-3d effect-3d--no-hover" aria-label="Show popup about service" data-fls-popup-link="service-popup-1">
+									<span>LEARN MORE</span>
+									<span>LEARN MORE</span>
+								</button>
+							</div>
+						</div>
+						<div class="services__item">
+							<h2 class="services__title title">02. Furniture design</h2>
+							<div class="services__content">
+								<div class="services__text text text--gray">
+									<p>
+										Posuere urna nec tincidunt praesent egestas maecenas pharetra convallis posuere ipsum nunc aliquet bibendum enim consectetur adipiscing.
+									</p>
+								</div>
+								<button type="button" class="services__button effect-3d effect-3d--no-hover" aria-label="Show popup about service" data-fls-popup-link="service-popup-2">
+									<span>LEARN MORE</span>
+									<span>LEARN MORE</span>
+								</button>
+							</div>
+						</div>
+						<div class="services__item">
+							<h2 class="services__title title">03. Landscape design</h2>
+							<div class="services__content">
+								<div class="services__text text text--gray">
+									<p>
+										Posuere urna nec tincidunt praesent egestas maecenas pharetra convallis posuere ipsum nunc aliquet bibendum enim consectetur adipiscing.
+									</p>
+								</div>
+								<button type="button" class="services__button effect-3d effect-3d--no-hover" aria-label="Show popup about service" data-fls-popup-link="service-popup-3">
+									<span>LEARN MORE</span>
+									<span>LEARN MORE</span>
+								</button>
+							</div>
+						</div>
+					</div>
+				</section>
+				<section class="gallery" data-fls-watcher="" data-fls-watcher-once="" data-fls-watcher-threshold="0.3">
+					<div class="gallery__items" data-fls-gallery="">
+						<a href="./assets/img/gallery/01.webp" class="gallery__item">
+							<picture>
+								<img alt="Gallery image №1" class="gallery__image" src="./assets/img/gallery/preview/01.webp">
+							</picture>
+							<svg class="gallery__icon" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path d="M15.8053 15.8013L21 21M10.5 7.5V13.5M7.5 10.5H13.5M18 10.5C18 14.6421 14.6421 18 10.5 18C6.35786 18 3 14.6421 3 10.5C3 6.35786 6.35786 3 10.5 3C14.6421 3 18 6.35786 18 10.5Z" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"></path>
+							</svg>
+						</a>
+						<a href="./assets/img/gallery/02.webp" class="gallery__item">
+							<picture>
+								<img alt="Gallery image №2" class="gallery__image" src="./assets/img/gallery/preview/02.webp">
+							</picture>
+							<svg class="gallery__icon" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path d="M15.8053 15.8013L21 21M10.5 7.5V13.5M7.5 10.5H13.5M18 10.5C18 14.6421 14.6421 18 10.5 18C6.35786 18 3 14.6421 3 10.5C3 6.35786 6.35786 3 10.5 3C14.6421 3 18 6.35786 18 10.5Z" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"></path>
+							</svg>
+						</a>
+						<a href="./assets/img/gallery/03.webp" class="gallery__item">
+							<picture>
+								<img alt="Gallery image №3" class="gallery__image" src="./assets/img/gallery/preview/03.webp">
+							</picture>
+							<svg class="gallery__icon" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path d="M15.8053 15.8013L21 21M10.5 7.5V13.5M7.5 10.5H13.5M18 10.5C18 14.6421 14.6421 18 10.5 18C6.35786 18 3 14.6421 3 10.5C3 6.35786 6.35786 3 10.5 3C14.6421 3 18 6.35786 18 10.5Z" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"></path>
+							</svg>
+						</a>
+						<a href="./assets/img/gallery/04.webp" class="gallery__item">
+							<picture>
+								<img alt="Gallery image №4" class="gallery__image" src="./assets/img/gallery/preview/04.webp">
+							</picture>
+							<svg class="gallery__icon" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path d="M15.8053 15.8013L21 21M10.5 7.5V13.5M7.5 10.5H13.5M18 10.5C18 14.6421 14.6421 18 10.5 18C6.35786 18 3 14.6421 3 10.5C3 6.35786 6.35786 3 10.5 3C14.6421 3 18 6.35786 18 10.5Z" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"></path>
+							</svg>
+						</a>
+					</div>
+				</section>
+				<section class="projects section-pbl" data-fls-watcher="navigator">
+					<div class="projects__subtitle subtitle-effect" data-fls-watcher="" data-fls-watcher-threshold="0.5" data-fls-mouse="" data-fls-mouse-cx="600" data-fls-mouse-cy="120">
+						<span>P</span>
+						<span>r</span>
+						<span>o</span>
+						<span>j</span>
+						<span>e</span>
+						<span>c</span>
+						<span>t</span>
+						<span>s</span>
+					</div>
+					<div class="projects__container" data-fls-watcher="" data-fls-watcher-once="" data-fls-watcher-threshold="0.1">
+						<div class="projects__header">
+							<h2 class="projects__title title">The latest projects</h2>
+						</div>
+						<div class="projects__items">
+							<div class="projects__item">
+								<button type="button" class="projects__link-img" aria-label="Show popup about project" data-fls-popup-link="project-popup-1">
+									<picture>
+										<img alt="Photo of our project" class="projects__image" src="./assets/img/projects/01.webp">
+									</picture>
+								</button>
+								<div class="projects__content">
+									<div class="projects__description text text--gray">
+										<p>Posuere urna nec tincidunt praesent egestas maecenas.</p>
+									</div>
+									<div class="projects__button-wr">
+										<button type="button" class="projects__button effect-3d effect-3d--no-hover" data-fls-popup-link="project-popup-1">
+											<span>Learm more</span>
+											<span>Learm more</span>
+										</button>
+									</div>
+								</div>
+							</div>
+							<div class="projects__item">
+								<button type="button" class="projects__link-img" aria-label="Show popup about project" data-fls-popup-link="project-popup-2">
+									<picture>
+										<img alt="Photo of our project" class="projects__image" src="./assets/img/projects/02.webp">
+									</picture>
+								</button>
+								<div class="projects__content">
+									<div class="projects__description text text--gray">
+										<p>Posuere urna nec tincidunt praesent egestas maecenas.</p>
+									</div>
+									<div class="projects__button-wr">
+										<button type="button" class="projects__button effect-3d effect-3d--no-hover" data-fls-popup-link="project-popup-2">
+											<span>Learm more</span>
+											<span>Learm more</span>
+										</button>
+									</div>
+								</div>
+							</div>
+							<div class="projects__item">
+								<button type="button" class="projects__link-img" aria-label="Show popup about project" data-fls-popup-link="project-popup-3">
+									<picture>
+										<img alt="Photo of our project" class="projects__image" src="./assets/img/projects/03.webp">
+									</picture>
+								</button>
+								<div class="projects__content">
+									<div class="projects__description text text--gray">
+										<p>Posuere urna nec tincidunt praesent egestas maecenas.</p>
+									</div>
+									<div class="projects__button-wr">
+										<button type="button" class="projects__button effect-3d effect-3d--no-hover" data-fls-popup-link="project-popup-3">
+											<span>Learm more</span>
+											<span>Learm more</span>
+										</button>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+				<section class="contacts section-pbl" data-fls-watcher="navigator">
+					<div class="contacts__subtitle subtitle-effect" data-fls-watcher="" data-fls-watcher-threshold="0.5" data-fls-mouse="" data-fls-mouse-cx="600" data-fls-mouse-cy="120">
+						<span>C</span>
+						<span>o</span>
+						<span>n</span>
+						<span>t</span>
+						<span>a</span>
+						<span>c</span>
+						<span>t</span>
+						<span>s</span>
+					</div>
+					<div class="contacts__container" data-fls-watcher="" data-fls-watcher-once="" data-fls-watcher-threshold="0.1">
+						<div class="contacts__content">
+							<div class="contacts__image">
+								<picture>
+									<source media="(max-width: 600px)" srcset="./assets/img/contacts/image-600.webp" type="image/webp">
+									<img alt="Image" src="./assets/img/contacts/image.webp">
+								</picture>
+							</div>
+							<h2 class="contacts__title title">Blending creativity and functionality in every design</h2>
+							<a href="tel:+380638509940" class="contacts__button effect-left-shift">
+								<span>Hire us now</span>
+								<span>+38 (063) 850 99 40</span>
+							</a>
+						</div>
+						<form action="files/sendmail/sendmail.php" data-fls-form="dev" data-fls-form-popup="form-send" method="POST" class="contacts__form form-contacts">
+							<input data-fls-form-validatenow="" data-fls-input="" type="text" class="form-contacts__input input" name="form[name]" placeholder="Enter your name" required>
+							<input data-fls-form-validatenow="" data-fls-input="" type="email" class="form-contacts__input input" name="form[email]" placeholder="Enter your email" required>
+							<input data-fls-form-validatenow="" data-fls-input="" data-fls-input-mask="+38(999) 999-9999" type="tel" class="form-contacts__input input" name="form[phone]" placeholder="Enter your phone" id="phone-mask" required>
+							<textarea data-fls-form-validatenow="" data-fls-input-mask="+38(999) 999-9999" data-fls-input-autoheight="" autocomplete="off" name="form[message]" class="form-contacts__textarea input" placeholder="Enter your message" required></textarea>
+							<button type="submit" class="form-contacts__button effect-3d">
+								<span>Send</span>
+								<span>Send</span>
+							</button>
+						</form>
+					</div>
+				</section>
 			</main>
-			<footer data-fls-footer="" class="footer">
-				<div class="footer__container"></div>
+			<footer data-fls-footer="" class="footer" data-fls-watcher="" data-fls-watcher-once="" data-fls-watcher-threshold="0.3">
+				<div class="footer__container">
+					<div class="footer__logo-wr">
+						<a href="#" class="footer__logo effect-3d" data-fls-scrollto=".hero" data-fls-scrollto-header="">
+							<span>Interia</span>
+							<span>Interia</span>
+						</a>
+					</div>
+					<div class="footer__socials socials">
+						<div class="social-wr">
+							<a href="https://www.linkedin.com/in/serhiy-konovalov-28605b323/" target="_blank" class="social social--linkedin" aria-label="linkedin">
+								<svg fill="currentColor" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewbox="-30.72 -30.72 573.44 573.44" xml:space="preserve">
+									<path style="display: inline; fill-rule: evenodd; clip-rule: evenodd;" d="M116.504,500.219V170.654H6.975v329.564H116.504 L116.504,500.219z M61.751,125.674c38.183,0,61.968-25.328,61.968-56.953c-0.722-32.328-23.785-56.941-61.252-56.941 C24.994,11.781,0.5,36.394,0.5,68.722c0,31.625,23.772,56.953,60.53,56.953H61.751L61.751,125.674z M177.124,500.219 c0,0,1.437-298.643,0-329.564H286.67v47.794h-0.727c14.404-22.49,40.354-55.533,99.44-55.533 c72.085,0,126.116,47.103,126.116,148.333v188.971H401.971V323.912c0-44.301-15.848-74.531-55.497-74.531 c-30.254,0-48.284,20.38-56.202,40.08c-2.897,7.012-3.602,16.861-3.602,26.711v184.047H177.124L177.124,500.219z"></path>
+								</svg>
+							</a>
+						</div>
+						<div class="social-wr">
+							<a href="https://www.instagram.com/web_interface_developer" target="_blank" class="social social--instagram" aria-label="instagram">
+								<span>
+									<svg viewbox="0 0 20.00 20.00" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" fill="currentColor">
+										<g id="Dribbble-Light-Preview" transform="translate(-340.000000, -7439.000000)" fill="currentColor">
+											<g id="icons" transform="translate(56.000000, 160.000000)">
+												<path d="M289.869652,7279.12273 C288.241769,7279.19618 286.830805,7279.5942 285.691486,7280.72871 C284.548187,7281.86918 284.155147,7283.28558 284.081514,7284.89653 C284.035742,7285.90201 283.768077,7293.49818 284.544207,7295.49028 C285.067597,7296.83422 286.098457,7297.86749 287.454694,7298.39256 C288.087538,7298.63872 288.809936,7298.80547 289.869652,7298.85411 C298.730467,7299.25511 302.015089,7299.03674 303.400182,7295.49028 C303.645956,7294.859 303.815113,7294.1374 303.86188,7293.08031 C304.26686,7284.19677 303.796207,7282.27117 302.251908,7280.72871 C301.027016,7279.50685 299.5862,7278.67508 289.869652,7279.12273 M289.951245,7297.06748 C288.981083,7297.0238 288.454707,7296.86201 288.103459,7296.72603 C287.219865,7296.3826 286.556174,7295.72155 286.214876,7294.84312 C285.623823,7293.32944 285.819846,7286.14023 285.872583,7284.97693 C285.924325,7283.83745 286.155174,7282.79624 286.959165,7281.99226 C287.954203,7280.99968 289.239792,7280.51332 297.993144,7280.90837 C299.135448,7280.95998 300.179243,7281.19026 300.985224,7281.99226 C301.980262,7282.98483 302.473801,7284.28014 302.071806,7292.99991 C302.028024,7293.96767 301.865833,7294.49274 301.729513,7294.84312 C300.829003,7297.15085 298.757333,7297.47145 289.951245,7297.06748 M298.089663,7283.68956 C298.089663,7284.34665 298.623998,7284.88065 299.283709,7284.88065 C299.943419,7284.88065 300.47875,7284.34665 300.47875,7283.68956 C300.47875,7283.03248 299.943419,7282.49847 299.283709,7282.49847 C298.623998,7282.49847 298.089663,7283.03248 298.089663,7283.68956 M288.862673,7288.98792 C288.862673,7291.80286 291.150266,7294.08479 293.972194,7294.08479 C296.794123,7294.08479 299.081716,7291.80286 299.081716,7288.98792 C299.081716,7286.17298 296.794123,7283.89205 293.972194,7283.89205 C291.150266,7283.89205 288.862673,7286.17298 288.862673,7288.98792 M290.655732,7288.98792 C290.655732,7287.16159 292.140329,7285.67967 293.972194,7285.67967 C295.80406,7285.67967 297.288657,7287.16159 297.288657,7288.98792 C297.288657,7290.81525 295.80406,7292.29716 293.972194,7292.29716 C292.140329,7292.29716 290.655732,7290.81525 290.655732,7288.98792" id="instagram-[#167]"></path>
+											</g>
+										</g>
+									</svg>
+								</span>
+							</a>
+						</div>
+						<div class="social-wr">
+							<a href="https://t.me/Web_Interface_Developer" target="_blank" class="social social--telegram" aria-label="telegram">
+								<svg viewbox="0 0 48.00 48.00" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path d="M41.4193 7.30899C41.4193 7.30899 45.3046 5.79399 44.9808 9.47328C44.8729 10.9883 43.9016 16.2908 43.1461 22.0262L40.5559 39.0159C40.5559 39.0159 40.3401 41.5048 38.3974 41.9377C36.4547 42.3705 33.5408 40.4227 33.0011 39.9898C32.5694 39.6652 24.9068 34.7955 22.2086 32.4148C21.4531 31.7655 20.5897 30.4669 22.3165 28.9519L33.6487 18.1305C34.9438 16.8319 36.2389 13.8019 30.8426 17.4812L15.7331 27.7616C15.7331 27.7616 14.0063 28.8437 10.7686 27.8698L3.75342 25.7055C3.75342 25.7055 1.16321 24.0823 5.58815 22.459C16.3807 17.3729 29.6555 12.1786 41.4193 7.30899Z" fill="currentColor"></path>
+								</svg>
+							</a>
+						</div>
+					</div>
+					<div class="footer__info">
+						<p>developed by</p>
+						<a href="https://serhiykonovalov-portfolio.netlify.app/" target="_blank" class="footer__button effect-3d effect-3d--no-hover">
+							<span>Serhiy</span>
+							<span>Serhiy</span>
+						</a>
+					</div>
+				</div>
 			</footer>
+		</div>
+		<div class="customers__popups">
+			<div data-fls-popup="customer-popup-1" aria-hidden="true" class="popup">
+				<div data-fls-popup-wrapper="" class="popup__wrapper">
+					<div data-fls-popup-body="" class="popup__body">
+						<div class="popup__image">
+							<picture>
+								<source media="(max-width: 600px)" srcset="./assets/img/team/avatars/01-600.webp" type="image/webp">
+								<img alt="Image" src="./assets/img/team/avatars/01.webp">
+							</picture>
+						</div>
+						<div data-fls-popup-content="" class="popup__content">
+							<div class="popup__info">
+								<p>Name Surname, 25 y.o., Kyiv, Ukraine</p>
+							</div>
+							<div class="popup__text">
+								<p>
+									Lorem ipsum dolor, sit amet consectetur adipisicing elit. Praesentium dignissimos possimus facere fuga, iure, dicta incidunt quibusdam assumenda minima illo, placeat quo! Assumenda debitis saepe odio veniam deserunt! Aperiam, dolore?
+								</p>
+							</div>
+						</div>
+						<button data-fls-popup-close="" type="button" class="popup__close" aria-label="Close popup">
+							<svg width="23" height="23" viewbox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path d="M1.73333 1.48883L21.5469 21.0288" stroke="currentColor" stroke-width="2" stroke-linecap="square"></path>
+								<path d="M21.2667 1.48883L1.45309 21.0288" stroke="currentColor" stroke-width="2" stroke-linecap="square"></path>
+							</svg>
+						</button>
+					</div>
+				</div>
+			</div>
+			<div data-fls-popup="customer-popup-2" aria-hidden="true" class="popup">
+				<div data-fls-popup-wrapper="" class="popup__wrapper">
+					<div data-fls-popup-body="" class="popup__body">
+						<div class="popup__image">
+							<picture>
+								<img alt="Image" src="./assets/img/team/avatars/02.webp">
+							</picture>
+						</div>
+						<div data-fls-popup-content="" class="popup__content">
+							<div class="popup__info">
+								<p>Name Surname, 25 y.o., Kyiv, Ukraine</p>
+							</div>
+							<div class="popup__text">
+								<p>
+									Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias maiores eius eaque numquam minus eligendi vitae explicabo beatae praesentium nihil consequuntur ratione repellat quidem incidunt impedit ex reprehenderit, hic molestias? Pariatur earum dolorem rerum eos dolor rem maiores illum ab. Earum quibusdam quaerat est, esse quisquam eum saepe modi voluptas quas magnam voluptatibus mollitia, accusantium labore. Eligendi pariatur commodi consequatur ipsa molestiae, quisquam optio quo officiis nostrum amet necessitatibus.
+								</p>
+							</div>
+						</div>
+						<button data-fls-popup-close="" type="button" class="popup__close" aria-label="Close popup">
+							<svg width="23" height="23" viewbox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path d="M1.73333 1.48883L21.5469 21.0288" stroke="currentColor" stroke-width="2" stroke-linecap="square"></path>
+								<path d="M21.2667 1.48883L1.45309 21.0288" stroke="currentColor" stroke-width="2" stroke-linecap="square"></path>
+							</svg>
+						</button>
+					</div>
+				</div>
+			</div>
+			<div data-fls-popup="customer-popup-3" aria-hidden="true" class="popup">
+				<div data-fls-popup-wrapper="" class="popup__wrapper">
+					<div data-fls-popup-body="" class="popup__body">
+						<div class="popup__image">
+							<picture>
+								<img alt="Image" src="./assets/img/team/avatars/03.webp">
+							</picture>
+						</div>
+						<div data-fls-popup-content="" class="popup__content">
+							<div class="popup__info">
+								<p>Name Surname, 25 y.o., Kyiv, Ukraine</p>
+							</div>
+							<div class="popup__text">
+								<p>
+									Lorem ipsum dolor, sit amet consectetur adipisicing elit. Praesentium dignissimos possimus facere fuga, iure, dicta incidunt quibusdam assumenda minima illo, placeat quo! Assumenda debitis saepe odio veniam deserunt! Aperiam, dolore?
+								</p>
+							</div>
+						</div>
+						<button data-fls-popup-close="" type="button" class="popup__close" aria-label="Close popup">
+							<svg width="23" height="23" viewbox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path d="M1.73333 1.48883L21.5469 21.0288" stroke="currentColor" stroke-width="2" stroke-linecap="square"></path>
+								<path d="M21.2667 1.48883L1.45309 21.0288" stroke="currentColor" stroke-width="2" stroke-linecap="square"></path>
+							</svg>
+						</button>
+					</div>
+				</div>
+			</div>
+			<div data-fls-popup="customer-popup-4" aria-hidden="true" class="popup">
+				<div data-fls-popup-wrapper="" class="popup__wrapper">
+					<div data-fls-popup-body="" class="popup__body">
+						<div class="popup__image">
+							<picture>
+								<source media="(max-width: 600px)" srcset="./assets/img/team/avatars/04-600.webp" type="image/webp">
+								<img alt="Image" src="./assets/img/team/avatars/04.webp">
+							</picture>
+						</div>
+						<div data-fls-popup-content="" class="popup__content">
+							<div class="popup__info">
+								<p>Name Surname, 25 y.o., Kyiv, Ukraine</p>
+							</div>
+							<div class="popup__text">
+								<p>
+									Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero, provident qui ipsum, blanditiis numquam, asperiores beatae dolorum magni molestias fuga ratione harum saepe. Omnis sint ullam repellat doloremque doloribus asperiores voluptates eum error rerum. Accusamus aperiam doloremque rerum aliquid nisi tempore ipsa, deleniti dolorum maiores nesciunt nulla commodi quaerat quasi omnis iste magnam quos tempora? Similique harum itaque modi quaerat repudiandae commodi iste, dolore nisi magni necessitatibus perspiciatis quos in debitis aliquid! Molestias totam voluptate maiores voluptatem.
+								</p>
+							</div>
+						</div>
+						<button data-fls-popup-close="" type="button" class="popup__close" aria-label="Close popup">
+							<svg width="23" height="23" viewbox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path d="M1.73333 1.48883L21.5469 21.0288" stroke="currentColor" stroke-width="2" stroke-linecap="square"></path>
+								<path d="M21.2667 1.48883L1.45309 21.0288" stroke="currentColor" stroke-width="2" stroke-linecap="square"></path>
+							</svg>
+						</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="services__popups">
+			<div data-fls-popup="service-popup-1" aria-hidden="true" class="popup">
+				<div data-fls-popup-wrapper="" class="popup__wrapper">
+					<div data-fls-popup-body="" class="popup__body">
+						<div data-fls-popup-content="" class="popup__content">
+							<div class="popup__info">
+								<p>Interior design</p>
+							</div>
+							<div class="popup__text">
+								<p>
+									Lorem ipsum dolor, sit amet consectetur adipisicing elit. Culpa aliquid laboriosam blanditiis beatae voluptatum ratione nemo dolorum corrupti commodi velit, cum id esse alias sequi, vero, exercitationem magni quibusdam veritatis. Exercitationem repudiandae vitae, tempora vero est quibusdam veniam blanditiis. Quos numquam veritatis cum dolor obcaecati quo maxime debitis nam doloremque!
+								</p>
+							</div>
+							<div class="popup__images">
+								<picture>
+									<source media="(max-width: 600px)" srcset="./assets/img/hero/01-600.webp" type="image/webp">
+									<source media="(max-width: 1200px)" srcset="./assets/img/hero/01-1200.webp" type="image/webp">
+									<img alt="Image" src="./assets/img/hero/01.webp">
+								</picture>
+								<picture>
+									<source media="(max-width: 600px)" srcset="./assets/img/hero/02-600.webp" type="image/webp">
+									<source media="(max-width: 1200px)" srcset="./assets/img/hero/02-1200.webp" type="image/webp">
+									<img alt="Image" src="./assets/img/hero/02.webp">
+								</picture>
+								<picture>
+									<source media="(max-width: 600px)" srcset="./assets/img/hero/03-600.webp" type="image/webp">
+									<source media="(max-width: 1200px)" srcset="./assets/img/hero/03-1200.webp" type="image/webp">
+									<img alt="Image" src="./assets/img/hero/03.webp">
+								</picture>
+								<picture>
+									<source media="(max-width: 600px)" srcset="./assets/img/hero/04-600.webp" type="image/webp">
+									<source media="(max-width: 1200px)" srcset="./assets/img/hero/04-1200.webp" type="image/webp">
+									<img alt="Image" src="./assets/img/hero/04.webp">
+								</picture>
+							</div>
+						</div>
+						<button data-fls-popup-close="" type="button" class="popup__close" aria-label="Close popup">
+							<svg width="23" height="23" viewbox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path d="M1.73333 1.48883L21.5469 21.0288" stroke="currentColor" stroke-width="2" stroke-linecap="square"></path>
+								<path d="M21.2667 1.48883L1.45309 21.0288" stroke="currentColor" stroke-width="2" stroke-linecap="square"></path>
+							</svg>
+						</button>
+					</div>
+				</div>
+			</div>
+			<div data-fls-popup="service-popup-2" aria-hidden="true" class="popup">
+				<div data-fls-popup-wrapper="" class="popup__wrapper">
+					<div data-fls-popup-body="" class="popup__body">
+						<div data-fls-popup-content="" class="popup__content">
+							<div class="popup__info">
+								<p>Furniture design</p>
+							</div>
+							<div class="popup__text">
+								<p>
+									Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ducimus ab quibusdam repellat, unde sapiente harum sed ad ratione illo officia voluptatum repellendus recusandae eaque. Accusamus deserunt quos tenetur officia aspernatur.
+								</p>
+							</div>
+							<div class="popup__images">
+								<picture>
+									<source media="(max-width: 600px)" srcset="./assets/img/about/01-600.webp" type="image/webp">
+									<source media="(max-width: 1200px)" srcset="./assets/img/about/01-1200.webp" type="image/webp">
+									<img alt="Image" src="./assets/img/about/01.webp">
+								</picture>
+								<picture>
+									<source media="(max-width: 600px)" srcset="./assets/img/about/02-600.webp" type="image/webp">
+									<img alt="Image" src="./assets/img/about/02.webp">
+								</picture>
+								<picture>
+									<source media="(max-width: 600px)" srcset="./assets/img/about/03-600.webp" type="image/webp">
+									<source media="(max-width: 1200px)" srcset="./assets/img/about/03-1200.webp" type="image/webp">
+									<img alt="Image" src="./assets/img/about/03.webp">
+								</picture>
+							</div>
+						</div>
+						<button data-fls-popup-close="" type="button" class="popup__close" aria-label="Close popup">
+							<svg width="23" height="23" viewbox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path d="M1.73333 1.48883L21.5469 21.0288" stroke="currentColor" stroke-width="2" stroke-linecap="square"></path>
+								<path d="M21.2667 1.48883L1.45309 21.0288" stroke="currentColor" stroke-width="2" stroke-linecap="square"></path>
+							</svg>
+						</button>
+					</div>
+				</div>
+			</div>
+			<div data-fls-popup="service-popup-3" aria-hidden="true" class="popup">
+				<div data-fls-popup-wrapper="" class="popup__wrapper">
+					<div data-fls-popup-body="" class="popup__body">
+						<div data-fls-popup-content="" class="popup__content">
+							<div class="popup__info">
+								<p>Landscape design</p>
+							</div>
+							<div class="popup__text">
+								<p>
+									Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptate optio fugit nobis! Quam porro libero aut officiis quisquam velit eaque tempore dolore, quidem quaerat perferendis dolorum placeat, fugiat aspernatur ad, deserunt ratione dignissimos deleniti repellendus nemo. Aspernatur, fugiat voluptatem quo facilis officiis facere doloribus dolore voluptatibus ipsa incidunt. Culpa, repudiandae voluptate. Sit quibusdam ullam et at? Voluptates laboriosam inventore, accusamus mollitia odit distinctio qui nobis quod rem recusandae fuga tempore.s
+								</p>
+							</div>
+							<div class="popup__images">
+								<picture>
+									<source media="(max-width: 600px)" srcset="./assets/img/gallery/01-600.webp" type="image/webp">
+									<source media="(max-width: 1200px)" srcset="./assets/img/gallery/01-1200.webp" type="image/webp">
+									<img alt="Image" src="./assets/img/gallery/01.webp">
+								</picture>
+								<picture>
+									<source media="(max-width: 600px)" srcset="./assets/img/gallery/02-600.webp" type="image/webp">
+									<source media="(max-width: 1200px)" srcset="./assets/img/gallery/02-1200.webp" type="image/webp">
+									<img alt="Image" src="./assets/img/gallery/02.webp">
+								</picture>
+								<picture>
+									<source media="(max-width: 600px)" srcset="./assets/img/gallery/03-600.webp" type="image/webp">
+									<source media="(max-width: 1200px)" srcset="./assets/img/gallery/03-1200.webp" type="image/webp">
+									<img alt="Image" src="./assets/img/gallery/03.webp">
+								</picture>
+								<picture>
+									<source media="(max-width: 600px)" srcset="./assets/img/gallery/04-600.webp" type="image/webp">
+									<img alt="Image" src="./assets/img/gallery/04.webp">
+								</picture>
+							</div>
+						</div>
+						<button data-fls-popup-close="" type="button" class="popup__close" aria-label="Close popup">
+							<svg width="23" height="23" viewbox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path d="M1.73333 1.48883L21.5469 21.0288" stroke="currentColor" stroke-width="2" stroke-linecap="square"></path>
+								<path d="M21.2667 1.48883L1.45309 21.0288" stroke="currentColor" stroke-width="2" stroke-linecap="square"></path>
+							</svg>
+						</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="projects__popups">
+			<div data-fls-popup="project-popup-1" aria-hidden="true" class="popup">
+				<div data-fls-popup-wrapper="" class="popup__wrapper">
+					<div data-fls-popup-body="" class="popup__body">
+						<div data-fls-popup-content="" class="popup__content">
+							<div class="popup__info">
+								<p>Lviv, Stryiska Street 105</p>
+							</div>
+							<div class="popup__text">
+								<p>
+									Lorem ipsum dolor, sit amet consectetur adipisicing elit. Culpa aliquid laboriosam blanditiis beatae voluptatum ratione nemo dolorum corrupti commodi velit, cum id esse alias sequi, vero, exercitationem magni quibusdam veritatis. Exercitationem repudiandae vitae, tempora vero est quibusdam veniam blanditiis. Quos numquam veritatis cum dolor obcaecati quo maxime debitis nam doloremque!
+								</p>
+							</div>
+							<div class="popup__images">
+								<picture>
+									<source media="(max-width: 600px)" srcset="./assets/img/hero/01-600.webp" type="image/webp">
+									<source media="(max-width: 1200px)" srcset="./assets/img/hero/01-1200.webp" type="image/webp">
+									<img alt="Image" src="./assets/img/hero/01.webp">
+								</picture>
+								<picture>
+									<source media="(max-width: 600px)" srcset="./assets/img/hero/02-600.webp" type="image/webp">
+									<source media="(max-width: 1200px)" srcset="./assets/img/hero/02-1200.webp" type="image/webp">
+									<img alt="Image" src="./assets/img/hero/02.webp">
+								</picture>
+								<picture>
+									<source media="(max-width: 600px)" srcset="./assets/img/hero/03-600.webp" type="image/webp">
+									<source media="(max-width: 1200px)" srcset="./assets/img/hero/03-1200.webp" type="image/webp">
+									<img alt="Image" src="./assets/img/hero/03.webp">
+								</picture>
+								<picture>
+									<source media="(max-width: 600px)" srcset="./assets/img/hero/04-600.webp" type="image/webp">
+									<source media="(max-width: 1200px)" srcset="./assets/img/hero/04-1200.webp" type="image/webp">
+									<img alt="Image" src="./assets/img/hero/04.webp">
+								</picture>
+							</div>
+						</div>
+						<button data-fls-popup-close="" type="button" class="popup__close" aria-label="Close popup">
+							<svg width="23" height="23" viewbox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path d="M1.73333 1.48883L21.5469 21.0288" stroke="currentColor" stroke-width="2" stroke-linecap="square"></path>
+								<path d="M21.2667 1.48883L1.45309 21.0288" stroke="currentColor" stroke-width="2" stroke-linecap="square"></path>
+							</svg>
+						</button>
+					</div>
+				</div>
+			</div>
+			<div data-fls-popup="project-popup-2" aria-hidden="true" class="popup">
+				<div data-fls-popup-wrapper="" class="popup__wrapper">
+					<div data-fls-popup-body="" class="popup__body">
+						<div data-fls-popup-content="" class="popup__content">
+							<div class="popup__info">
+								<p>Kyiv, Arsenalna Street 44</p>
+							</div>
+							<div class="popup__text">
+								<p>
+									Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ducimus ab quibusdam repellat, unde sapiente harum sed ad ratione illo officia voluptatum repellendus recusandae eaque. Accusamus deserunt quos tenetur officia aspernatur.
+								</p>
+							</div>
+							<div class="popup__images">
+								<picture>
+									<source media="(max-width: 600px)" srcset="./assets/img/about/01-600.webp" type="image/webp">
+									<source media="(max-width: 1200px)" srcset="./assets/img/about/01-1200.webp" type="image/webp">
+									<img alt="Image" src="./assets/img/about/01.webp">
+								</picture>
+								<picture>
+									<source media="(max-width: 600px)" srcset="./assets/img/about/02-600.webp" type="image/webp">
+									<img alt="Image" src="./assets/img/about/02.webp">
+								</picture>
+								<picture>
+									<source media="(max-width: 600px)" srcset="./assets/img/about/03-600.webp" type="image/webp">
+									<source media="(max-width: 1200px)" srcset="./assets/img/about/03-1200.webp" type="image/webp">
+									<img alt="Image" src="./assets/img/about/03.webp">
+								</picture>
+							</div>
+						</div>
+						<button data-fls-popup-close="" type="button" class="popup__close" aria-label="Close popup">
+							<svg width="23" height="23" viewbox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path d="M1.73333 1.48883L21.5469 21.0288" stroke="currentColor" stroke-width="2" stroke-linecap="square"></path>
+								<path d="M21.2667 1.48883L1.45309 21.0288" stroke="currentColor" stroke-width="2" stroke-linecap="square"></path>
+							</svg>
+						</button>
+					</div>
+				</div>
+			</div>
+			<div data-fls-popup="project-popup-3" aria-hidden="true" class="popup">
+				<div data-fls-popup-wrapper="" class="popup__wrapper">
+					<div data-fls-popup-body="" class="popup__body">
+						<div data-fls-popup-content="" class="popup__content">
+							<div class="popup__info">
+								<p>Khmelnytskyi, 237 Volodymyra Velykoho Street</p>
+							</div>
+							<div class="popup__text">
+								<p>
+									Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptate optio fugit nobis! Quam porro libero aut officiis quisquam velit eaque tempore dolore, quidem quaerat perferendis dolorum placeat, fugiat aspernatur ad, deserunt ratione dignissimos deleniti repellendus nemo. Aspernatur, fugiat voluptatem quo facilis officiis facere doloribus dolore voluptatibus ipsa incidunt. Culpa, repudiandae voluptate. Sit quibusdam ullam et at? Voluptates laboriosam inventore, accusamus mollitia odit distinctio qui nobis quod rem recusandae fuga tempore.s
+								</p>
+							</div>
+							<div class="popup__images">
+								<picture>
+									<source media="(max-width: 600px)" srcset="./assets/img/gallery/01-600.webp" type="image/webp">
+									<source media="(max-width: 1200px)" srcset="./assets/img/gallery/01-1200.webp" type="image/webp">
+									<img alt="Image" src="./assets/img/gallery/01.webp">
+								</picture>
+								<picture>
+									<source media="(max-width: 600px)" srcset="./assets/img/gallery/02-600.webp" type="image/webp">
+									<source media="(max-width: 1200px)" srcset="./assets/img/gallery/02-1200.webp" type="image/webp">
+									<img alt="Image" src="./assets/img/gallery/02.webp">
+								</picture>
+								<picture>
+									<source media="(max-width: 600px)" srcset="./assets/img/gallery/03-600.webp" type="image/webp">
+									<source media="(max-width: 1200px)" srcset="./assets/img/gallery/03-1200.webp" type="image/webp">
+									<img alt="Image" src="./assets/img/gallery/03.webp">
+								</picture>
+								<picture>
+									<source media="(max-width: 600px)" srcset="./assets/img/gallery/04-600.webp" type="image/webp">
+									<img alt="Image" src="./assets/img/gallery/04.webp">
+								</picture>
+							</div>
+						</div>
+						<button data-fls-popup-close="" type="button" class="popup__close" aria-label="Close popup">
+							<svg width="23" height="23" viewbox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path d="M1.73333 1.48883L21.5469 21.0288" stroke="currentColor" stroke-width="2" stroke-linecap="square"></path>
+								<path d="M21.2667 1.48883L1.45309 21.0288" stroke="currentColor" stroke-width="2" stroke-linecap="square"></path>
+							</svg>
+						</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div data-fls-popup="form-send" aria-hidden="true" class="popup">
+			<div data-fls-popup-wrapper="" class="popup__wrapper">
+				<div data-fls-popup-body="" class="popup__body">
+					<div data-fls-popup-content="" class="popup__content">
+						<div class="popup__info">
+							<p>Form submitted successfully! We will contact you soon</p>
+						</div>
+					</div>
+					<button data-fls-popup-close="" type="button" class="popup__close" aria-label="Close popup">
+						<svg width="23" height="23" viewbox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path d="M1.73333 1.48883L21.5469 21.0288" stroke="currentColor" stroke-width="2" stroke-linecap="square"></path>
+							<path d="M21.2667 1.48883L1.45309 21.0288" stroke="currentColor" stroke-width="2" stroke-linecap="square"></path>
+						</svg>
+					</button>
+				</div>
+			</div>
 		</div>
 	</body>
 </html>
