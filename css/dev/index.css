@@ -3709,6 +3709,11 @@ body::after {
   top: 1.5625rem;
   right: 1.5625rem;
 }
+@media (75em >= width >= 62em){
+  .header__container {
+    margin-inline: 0.9375rem;
+  }
+}
 @media (width <= 62em){
   .menu__list {
     column-gap: 0.625rem;
