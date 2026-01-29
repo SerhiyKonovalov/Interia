@@ -8154,7 +8154,8 @@ function initGallery() {
         plugins: [lgZoom, lgThumbnail, lgFullscreen],
         licenseKey: KEY,
         speed: 500,
-        selector: "a"
+        selector: "a",
+        mode: "lg-slide-circular"
       });
     });
   }
