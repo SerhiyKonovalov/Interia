@@ -2568,6 +2568,9 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item:not(.lg-zoomable).lg-co
 .footer__logo {
   font-size: 1.25rem;
 }
+.footer__logo span {
+  padding-inline: 1.25rem 0.9375rem;
+}
 .footer__socials {
   gap: 1.25rem;
 }
@@ -2978,7 +2981,6 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item:not(.lg-zoomable).lg-co
   background: rgba(0, 0, 0, 0.4);
 }
 .slide-hero__image img {
-  overflow: visible;
   position: absolute;
   top: 0;
   left: 0;
